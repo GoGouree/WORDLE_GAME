@@ -1,5 +1,4 @@
-const words = ['PLANT', 'APPLE', 'BRAVE', 'CRISP', 'DREAM']; // Add more 5-letter words as needed
-const solution = words[Math.floor(Math.random() * words.length)];
+const solution = 'CLOUD';// change this word as needed each time we play a new game. 
 let currentRow = 0;
 let currentTile = 0;
 
