@@ -1,4 +1,4 @@
-const solution = 'CLOUD';// change this word as needed each time we play a new game. 
+const solution = 'CLOUD'; // You can choose any 5-letter word
 let currentRow = 0;
 let currentTile = 0;
 
