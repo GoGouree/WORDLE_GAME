@@ -1,6 +1,5 @@
 const solution = 'CLOUD'; // You can choose any 5-letter word
 let currentRow = 0;
-let currentTile = 0;
 
 function submitGuess() {
     const guessInput = document.getElementById('guessInput');
@@ -45,14 +44,8 @@ function showMessage(message) {
     const messageDiv = document.getElementById('message');
     messageDiv.textContent = message;
 }
-document.getElementById('guessButton').addEventListener('click', submitGuess);
 
-function submitGuess() {
-    const guessInput = document.getElementById('guessInput').value.toUpperCase();
-    if (guessInput.length !== 5) {
-        document.getElementById('message').innerText = 'Please enter a 5-letter word.';
-        return;
-    }
+document.getElementById('guessButton').addEventListener('click', submitGuess);
 
     // Find the first empty row
     const rows = document.querySelectorAll('.row');
