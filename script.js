@@ -46,4 +46,29 @@ function showMessage(message) {
     const messageDiv = document.getElementById('message');
     messageDiv.textContent = message;
 }
+document.getElementById('guessButton').addEventListener('click', submitGuess);
+
+function submitGuess() {
+    const guessInput = document.getElementById('guessInput').value.toUpperCase();
+    if (guessInput.length !== 5) {
+        document.getElementById('message').innerText = 'Please enter a 5-letter word.';
+        return;
+    }
+
+    // Find the first empty row
+    const rows = document.querySelectorAll('.row');
+    for (let row of rows) {
+        const tiles = row.querySelectorAll('.tile');
+        if (tiles[0].innerText === '') {
+            // Fill the row with the guessed word
+            for (let i = 0; i < 5; i++) {
+                tiles[i].innerText = guessInput[i];
+            }
+            break;
+        }
+    }
+
+    // Clear the input field
+    document.getElementById('guessInput').value = '';
+}
 
